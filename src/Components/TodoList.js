@@ -22,7 +22,7 @@ function TodoList() {
                 filterTodos.length === 0
                     ? <p>There is not Todo</p>
                     : filterTodos.map(item => <Todo key={item.key}
-                                                    text={item.text}/>)
+                                                    item={item}/>)
             }
 
         </div>

@@ -3,6 +3,9 @@ function AppReducer(state, action) {
         case 'add_todo':
             return addTodo(state, action);
             break;
+        case 'delete_todo':
+            return deleteTodo(state, action);
+            break;
         default:
             return state
     }
@@ -17,6 +20,15 @@ let addTodo = (state, action) => {
         todos: [
             ...state.todos,
             {key: Date.now(), done: false, text}
+        ]
+    }
+}
+
+let deleteTodo = (state, action) => {
+    let {key} = action.payload
+    return {
+        todos: [
+            ...state.todos.filter(item => item.key !== key)
         ]
     }
 }
