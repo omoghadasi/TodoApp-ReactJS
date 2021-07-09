@@ -8,7 +8,7 @@ function Todo(props) {
                     {props.text}
                 </h6>
                 <div className="col-4 m-1">
-                    <div className="btn-group"
+                    <div className="btn-group btn-group-sm"
                          role="group"
                          aria-label="Basic example">
                         <button type="button"
