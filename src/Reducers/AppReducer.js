@@ -6,6 +6,12 @@ function AppReducer(state, action) {
         case 'delete_todo':
             return deleteTodo(state, action);
             break;
+        case 'done_todo':
+            return doneTodo(state, action);
+            break;
+        case 'undone_todo':
+            return undoneTodo(state, action);
+            break;
         default:
             return state
     }
@@ -29,6 +35,35 @@ let deleteTodo = (state, action) => {
     return {
         todos: [
             ...state.todos.filter(item => item.key !== key)
+        ]
+    }
+}
+let doneTodo = (state, action) => {
+    let {key} = action.payload
+    let {todos} = state;
+
+    let newTodos = todos.filter(item => item.key !== key)
+    let item = todos.filter(item => item.key === key)
+    item[0].done = true
+
+    return {
+        todos: [
+            ...newTodos, ...item
+        ]
+    }
+}
+
+let undoneTodo = (state, action) => {
+    let {key} = action.payload
+    let {todos} = state;
+
+    let newTodos = todos.filter(item => item.key !== key)
+    let item = todos.filter(item => item.key === key)
+    item[0].done = false
+
+    return {
+        todos: [
+            ...newTodos, ...item
         ]
     }
 }
