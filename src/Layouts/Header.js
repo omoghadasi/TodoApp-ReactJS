@@ -2,22 +2,15 @@ import React from "react";
 
 function Header() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark bg-light">
-            <div className="container-fluid">
-                <a className="navbar-brand"
-                   href="#">Todo App</a>
-                <div className="collapse navbar-collapse"
-                     id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li className="nav-item">
-                            <a className="nav-link active"
-                               aria-current="page"
-                               href="#">Home</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        <div className="d-inline-block">
+            <img src="http://imomid.ir/wp-content/uploads/2021/06/Logo.png"
+                 className="mx-auto d-block rounded-circle"
+                 alt="Logo"
+                 width="100"/>
+            <h4>Hi i am omid moghadasi</h4>
+            <h2>Welcome to my simple todo list project</h2>
+            <p>Apply to use the project through the form below</p>
+        </div>
     )
 }
 
