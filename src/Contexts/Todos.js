@@ -7,6 +7,8 @@ const TodosContext = React.createContext({
     delete: () => {
     },
     toggle: () => {
+    },
+    edit: () => {
     }
 })
 
