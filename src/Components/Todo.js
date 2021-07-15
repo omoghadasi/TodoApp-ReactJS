@@ -27,8 +27,9 @@ function Todo(props) {
 
     return (
         !edit
-            ? (<div className="col-12 border-top border-bottom m-1 p-0">
-                <div className="d-flex col-12 p-2 align-items-center">
+            ? (
+
+                <div className="d-flex col-12 p-2 align-items-center border mb-1 rounded">
                     <h6 className="col-8 text-left mb-0">
                         {props.item.text}
                     </h6>
@@ -51,7 +52,7 @@ function Todo(props) {
                         </div>
                     </div>
                 </div>
-            </div>)
+            )
             :
             (<EditTodo item={props.item}
                        edit={editHandler}/>)

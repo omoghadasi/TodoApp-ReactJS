@@ -17,13 +17,16 @@ function TodoList() {
                         onClick={() => setStatusDone(true)}>Done <span className={`badge ${statusDone ? 'badge-light' : 'badge-primary'}`}>{todos.filter(item => item.done === true).length}</span>
                 </button>
             </div>
+            <div className="p-2 mt-2 rounded"
+                 style={{background: "white"}}>
+                {
+                    filterTodos.length === 0
+                        ? <p>There isn't Todo</p>
+                        : filterTodos.map(item => <Todo key={item.key}
+                                                        item={item}/>)
+                }
+            </div>
 
-            {
-                filterTodos.length === 0
-                    ? <p>There is not Todo</p>
-                    : filterTodos.map(item => <Todo key={item.key}
-                                                    item={item}/>)
-            }
 
         </div>
     )

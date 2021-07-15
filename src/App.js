@@ -118,6 +118,8 @@ function App() {
                     <TodoForm/>
                     <TodoList/>
                 </div>
+                <p className="pt-4">Developed with ❤ by <a href="http://imomid.ir"
+                                                           target="_blank">Omid Moghadasi</a></p>
             </div>
         </TodosContext.Provider>
     );
